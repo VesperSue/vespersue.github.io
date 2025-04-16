@@ -18,7 +18,7 @@
 
   <style type="text/css">
     div.main {
-        width: 1130px;
+        width: 1400px;
         margin: auto auto;
         overflow: auto}
     div.introduction {
@@ -77,22 +77,30 @@
     table.pubication {
         height: 240px;
     }
-    img.thumbnail {
+    /* img.thumbnail {
         width: 500px;
         height: 300px;
         margin-left: 50px;
         margin-right: 50px;
         margin-top: 100px;
+    } */
+    img.thumbnail {
+    max-width: 100%;   
+    width: 500px;   /* 自动适配容器宽度 */
+    height: auto;         /* 保持宽高比 */
+    display: block;       /* 去除下方间隙 */
+    margin: 0px 0px 30px 0px;
+    line-height: 1;  /* 上、右、下、左的顺序 */
     }
     td.paperintro {
         text-align:left; 
         vertical-align:top;
     }
     p.paperintro {
-        margin-left: 5px;
+        margin-left: 50px;
         margin-top: 10px;
-        width: 500px;
-        line-height:150%;
+        width: 1050px;
+        line-height:100%;
     }
     span.conference {
         font-family: Georgia, serif;
@@ -103,20 +111,27 @@
     span.bigtitle {
         font-family: questrial,sans-serif;
         font-weight:normal;
-        line-height: 1.35em;
+        line-height: 0.5em;
         font-size:40px;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
     span.papertitle {
         font-family: questrial,sans-serif;
         font-weight:normal;
-        line-height: 1.35em;
+        line-height: 1em;
         font-size:22px;
+    }
+    span.mention {
+        font-family: questrial,sans-serif;
+        font-weight:normal;
+        line-height: 1em;
+        font-size:22px;
+        color: #ffa800;
     }
     span.black {
         font-family: questrial,sans-serif;
-        font-weight:bold;
-        line-height: 1.35em;
+        font-weight:normal;
+        line-height: 1em;
         font-size:22px;
     }
     /* normal normal normal 40px/1.35em questrial,sans-serif */
@@ -162,6 +177,7 @@
         font-family: "Gill Sans", sans-serif;
         color: #3159D1;
         text-decoration: none;
+        vertical-align: middle;
     }
     a.resource_empty {
         font-family: "Gill Sans", sans-serif;
@@ -444,130 +460,167 @@ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
      -->
     <div class="main">
         <table class="pubication">
-            <tbody><tr>
-                <td class="thumbnail">
-                    <img src="files/arstorytelling_teaser.png" class="thumbnail">
-                </td>
-                <td class="paperintro">
-                    <p class="paperintro">
-                        <span class="bigtitle">AR Storytelling</span>
-                        <br><br><br>
-                        <span class="papertitle"> <span class="black">IMWUT2023:</span> Exploring the Opportunities of AR for Enriching Storytelling with Family Photos between Grandparents and Grandchildren </span>
-                        <br><br>
-                        <span class="authorlist"> <span class="authorme">Zisu Li</span>, Li Feng, Chen Liang, Yuru Huang, Mingming Fan</span>
-                    </p>
-                    <br>
-                    <p>
-                    <!-- <p class="abstract" align="justify">
-                        ConeSpeech is a virtual reality (VR) based multi-user remote communication technique, which enables users to selectively speak to target listeners without distracting bystanders. With ConeSpeech, the user looks at the target listener and only in a cone-shaped area in the direction can the listeners hear the speech.
-                    <br><br> -->
-                        <a href="https://dl.acm.org/doi/10.1145/3610903" target="_blank" class="resource">[ACM]</a>
-                        <a href="https://dl.acm.org/doi/10.1145/3610903" target="_blank" class="resource">[Video]</a>
-                    </p>
-                    <p></p>
-                </td>
-            </tr>
-        </tbody></table>
-			<table class="pubication">
-				<tbody><tr>
-					<td class="thumbnail">
-						<img src="files/h2f_teaser.png" class="thumbnail">
-					</td>
-					<td class="paperintro">
-						<p class="paperintro">
-							<span class="bigtitle">Hand-to-Face</span>
-							<br><br><br>
-							<span class="papertitle"> <span class="black">CHI2023:</span> Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing (<img src="img/hm_acmdl.jpeg" style="width: 20px; height: 20px;">Honorable Mention Award) </span>
-							<br><br>
-							<span class="authorlist"> <span class="authorme">Zisu Li</span>*, Chen Liang*, Yuntao Wang, Yue Qin, Chun Yu, Yukang Yan, Mingming Fan, Yuanchun Shi</span>
-						</p>
-                        <br>
-                        <p>
-						<!-- <p class="abstract" align="justify">
-							ConeSpeech is a virtual reality (VR) based multi-user remote communication technique, which enables users to selectively speak to target listeners without distracting bystanders. With ConeSpeech, the user looks at the target listener and only in a cone-shaped area in the direction can the listeners hear the speech.
-						<br><br> -->
-							<a href="https://dl.acm.org/doi/abs/10.1145/3544548.3581008" target="_blank" class="resource">[ACM]</a>
-							<a href="https://dl.acm.org/doi/abs/10.1145/3544548.3581008" target="_blank" class="resource">[Video]</a>
-						</p>
-						<p></p>
-					</td>
-				</tr>
-			</tbody></table>
-            <table class="pubication">
-				<tbody><tr>
-					<td class="thumbnail">
-						<img src="files/ShadowTouch_teaser.png" class="thumbnail">
-					</td>
-					<td class="paperintro">
-						<p class="paperintro">
-							<span class="bigtitle">ShadowTouch</span>
-							<br><br><br>
-							<span class="papertitle"> <span class="black">UIST2023:</span> ShadowTouch: Enabling Free-Form Touch-Based Hand-to-Surface Interaction with Wrist-Mounted Illuminant by Shadow Projection </span>
-							<br><br>
-							<span class="authorlist"> Chen Liang, Xutong Wang, <span class="authorme">Zisu Li</span>, Chi Hsia, Mingming Fan, Chun Yu, and Yuanchun Shi</span>
-						</p>
-                        <br>
-						<p>
-                            <!-- <p class="abstract" align="justify">
-                                ConeSpeech is a virtual reality (VR) based multi-user remote communication technique, which enables users to selectively speak to target listeners without distracting bystanders. With ConeSpeech, the user looks at the target listener and only in a cone-shaped area in the direction can the listeners hear the speech.
-                            <br><br> -->
-                                <a href="" target="_blank" class="resource">[ACM]</a>
-                                <a href="" target="_blank" class="resource">[Video]</a>
+            <tbody>
+                <tr> 
+                    <td class="thumbnail" style="vertical-align: top;"> <!-- 图片顶部对齐 -->
+                        <img src="files/MIT-InteRecon.png" class="thumbnail" style="vertical-align: top;"> <!-- 设置图片的垂直对齐为顶部 -->
+                    </td>
+                    <td class="paperintro">
+                        <p class="paperintro">
+                            <span class="bigtitle" style="vertical-align: top;">Interactive Digital Items</span> <!-- 确保标题与图片顶部对齐 -->
+                            <br><br><br>
+                            <span class="papertitle">
+                                 InteRecon: Towards Reconstructing Interactivity of Personal Memorable Items in Mixed Reality 
+                            </span>
+                            <br><br>
+                            <span class="authorlist"> 
+                                <span class="authorme">Zisu Li</span>, Jiawei Li, Zeyu Xiong, Shumeng Zhang, Faraz Faruqi, Stefanie Mueller, Chen Liang, Xiaojuan Ma, Mingming Fan
+                            </span>
+                            <br><br>
+                            <span class="black" style="display: inline-block; vertical-align: middle;">ACM CHI Conference on Human Factors in Computing Systems, 2025</span>
+                                <a href="https://arxiv.org/abs/2502.09973" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[ACM]</a>
+                            <a href="https://www.youtube.com/watch?v=5OR7vwUmjJw" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[Video]</a>
+                            <a href="https://news.mit.edu/2025/interecon-brings-personal-items-to-mixed-reality-0407" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[MIT News]</a>
                             </p>
-						<p></p>
-					</td>
-				</tr>
-			</tbody></table>
-            <table class="pubication">
-				<tbody><tr>
-					<td class="thumbnail">
-						<img src="files/ConeSpeech_teaser.png" class="thumbnail">
-					</td>
-					<td class="paperintro">
-						<p class="paperintro">
-							<span class="bigtitle">ConeSpeech</span>
-							<br><br><br>
-							<span class="papertitle"> <span class="black">TVCG2023:</span> ConeSpeech: Exploring Directional Speech Interaction for Multi-Person Remote Communication in Virtual Reality (<img src="img/hm_acmdl.jpeg" style="width: 20px; height: 20px;">Best Paper Nominee Award) </span>
-							<br><br>
-							<span class="authorlist"> Yukang Yan, Haohua Liu, Yingtian Shi, Jingying Wang, Ruici Guo, <span class="authorme">Zisu Li</span>, Xuhai Xu, Chun Yu, Yuntao Wang and Yuanchun Shi</span>
-						</p>
                         <br>
-						<p>
-                            <!-- <p class="abstract" align="justify">
-                                ConeSpeech is a virtual reality (VR) based multi-user remote communication technique, which enables users to selectively speak to target listeners without distracting bystanders. With ConeSpeech, the user looks at the target listener and only in a cone-shaped area in the direction can the listeners hear the speech.
-                            <br><br> -->
-                                <a href="https://ieeexplore.ieee.org/abstract/document/10049667?casa_token=3SH-f28c2k4AAAAA:Nj88S5RAe_W7oo0H3POfUEXsM3wcQXgWrX6vB9nyF9b2bkzCz6X8pqbtDmvhuHVZbEB7C91DGxCrhw" target="_blank" class="resource">[ACM]</a>
-                                <a href="" target="_blank" class="resource">[Video]</a>
+                    </td>
+                </tr>
+            </tbody> 
+            <tbody>
+                <tr> 
+                    <td class="thumbnail" style="vertical-align: top;"> <!-- 图片顶部对齐 -->
+                        <img src="files/acknowledge_teaser.png" class="thumbnail" style="vertical-align: top;"> <!-- 设置图片的垂直对齐为顶部 -->
+                    </td>
+                    <td class="paperintro">
+                        <p class="paperintro">
+                            <span class="bigtitle" style="vertical-align: top;">Affordance-based Interaction</span> <!-- 确保标题与图片顶部对齐 -->
+                            <br><br><br>
+                            <span class="papertitle">
+                                ACKnowledge: A Computational Framework for Human Compatible Affordance-based Interaction Planning in Real-world Contexts 
+                            </span>
+                            <br><br>
+                            <span class="authorlist"> 
+                                <span class="authorlist"> Ziqi Pan, Xiucheng Zhang, <span class="authorme">Zisu Li</span>, Zhenhui Peng, Mingming Fan, and Xiaojuan Ma</span>
+                            <br><br>
+                            <span class="black" style="display: inline-block; vertical-align: middle;">ACM CHI Conference on Human Factors in Computing Systems, 2025</span>
+                                <a href="" target="_blank" class="resource_empty" style="display: inline-block; vertical-align: middle;">[ACM]</a>
+                            <a href="" target="_blank" class="resource_empty" style="display: inline-block; vertical-align: middle;">[Video]</a>
                             </p>
-						<p></p>
-					</td>
-				</tr>
-			</tbody></table>
-            <!-- <table class="pubication">
-				<tbody><tr>
-					<td class="thumbnail">
-						<img src="./img/conespeech.png" class="thumbnail" style="height: 400;">
-					</td>
-					<td class="paperintro">
-						<p class="paperintro">
-							<span class="bigtitle">ConeSpeech</span>
-							<br><br><br>
-							<span class="papertitle"> <span class="black">TVCG2023:</span> ConeSpeech: Exploring Directional Speech Interaction for Multi-Person Remote Communication in Virtual Reality (Honorable MentionBest Paper Nominee Award) </span>
-							<br><br>
-							<span class="authorlist"> <span class="authorme">Chen Liang</span>, Xutong Wang, Zisu Li, Chi Hsia, Mingming Fan, Chun Yu, and Yuanchun Shi</span>
-						</p>
                         <br>
-						<p class="abstract" align="justify">
-							ConeSpeech is a virtual reality (VR) based multi-user remote communication technique, which enables users to selectively speak to target listeners without distracting bystanders. With ConeSpeech, the user looks at the target listener and only in a cone-shaped area in the direction can the listeners hear the speech.
-						<br><br>
-							<a href="https://ieeexplore.ieee.org/abstract/document/9757511" target="_blank" class="resource">[PDF]</a>
-							<a href="./files/chi24a-sub3068-i14.mp4" target="_blank" class="resource">[Video]</a>
-						</p>
-						<p></p>
-					</td>
-				</tr>
-			</tbody></table>
-                -->
+                    </td>
+                </tr>
+            </tbody> 
+
+            <tbody>
+                <tr> 
+                    <td class="thumbnail" style="vertical-align: top;"> <!-- 图片顶部对齐 -->
+                        <img src="files/h2f_teaser.png" class="thumbnail" style="vertical-align: top;"> <!-- 设置图片的垂直对齐为顶部 -->
+                    </td>
+                    <td class="paperintro">
+                        <p class="paperintro">
+                            <span class="bigtitle" style="vertical-align: top;">Hand-to-Face</span> <!-- 确保标题与图片顶部对齐 -->
+                            <br><br><br>
+                            <span class="papertitle">
+                                Enabling Voice-Accompanying Hand-to-Face Gesture Recognition with Cross-Device Sensing 
+                                <br>
+                            <span class="mention"><img src="files/award.png" style="width: 20px; height: 20px;"> Best Paper Honorable Mention Award</span> 
+                            </span>
+                            <br><br>
+                            <span class="authorlist"> 
+                                <span class="authorlist"> <span class="authorme">Zisu Li</span>*, Chen Liang*, Yuntao Wang, Yue Qin, Chun Yu, Yukang Yan, Mingming Fan, Yuanchun Shi</span>
+                            <br><br>
+                            <span class="black" style="display: inline-block; vertical-align: middle;">ACM CHI Conference on Human Factors in Computing Systems, 2023</span>
+                                <a href="https://dl.acm.org/doi/full/10.1145/3544548.3581008" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[ACM]</a>
+                            <a href="https://www.youtube.com/watch?v=eGcoJuocufw&t=51s" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[Video]</a>
+                            </p>
+                        <br>
+                    </td>
+                </tr>
+            </tbody> 
+            <tbody>
+                <tr> 
+                    <td class="thumbnail" style="vertical-align: top;"> <!-- 图片顶部对齐 -->
+                        <img src="files/arstorytelling_teaser.png" class="thumbnail" style="vertical-align: top;"> <!-- 设置图片的垂直对齐为顶部 -->
+                    </td>
+                    <td class="paperintro">
+                        <p class="paperintro">
+                            <span class="bigtitle" style="vertical-align: top;">AR Storytelling</span> <!-- 确保标题与图片顶部对齐 -->
+                            <br><br><br>
+                            <span class="papertitle">
+                                Exploring the Opportunities of AR for Enriching Storytelling with Family Photos between Grandparents and Grandchildren 
+                            </span>
+                            <br><br>
+                            <span class="authorlist"> 
+                                <span class="authorlist"> <span class="authorme">Zisu Li</span>, Li Feng, Chen Liang, Yuru Huang, Mingming Fan</span>
+                            <br><br>
+                            <span class="black" style="display: inline-block; vertical-align: middle;">ACM international joint conference on Pervasive and Ubiquitous Computing (UbiComp) 2023</span>
+                                <a href="https://dl.acm.org/doi/10.1145/3610903" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[ACM]</a>
+                            <a href="https://dl.acm.org/doi/10.1145/3610903" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[Video]</a>
+                            </p>
+                        <br>
+                    </td>
+                </tr>
+            </tbody> 
+
+            
+
+            <tbody>
+                <tr> 
+                    <td class="thumbnail" style="vertical-align: top;"> <!-- 图片顶部对齐 -->
+                        <img src="files/ShadowTouch_teaser.png" class="thumbnail" style="vertical-align: top;"> <!-- 设置图片的垂直对齐为顶部 -->
+                    </td>
+                    <br><br>
+                    <td class="paperintro">
+                        <p class="paperintro">
+                            <span class="bigtitle" style="vertical-align: top;">ShadowTouch</span> <!-- 确保标题与图片顶部对齐 -->
+                            <br><br><br>
+                            <span class="papertitle">
+                                ShadowTouch: Enabling Free-Form Touch-Based Hand-to-Surface Interaction with Wrist-Mounted Illuminant by Shadow Projection
+                            <br><br>
+                            <span class="authorlist"> 
+                                <span class="authorlist"> Chen Liang, Xutong Wang, <span class="authorme">Zisu Li</span>, Chi Hsia, Mingming Fan, Chun Yu, and Yuanchun Shi</span>
+                            <br><br>
+                            <span class="black" style="display: inline-block; vertical-align: middle;">ACM Symposium on User Interface Software and Technology, 2023</span>
+                                <a href="https://dl.acm.org/doi/abs/10.1145/3586183.3606785" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[ACM]</a>
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3586183.3606785" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[Video]</a>
+                            </p>
+                        <br>
+                    </td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr> 
+                    <td class="thumbnail" style="vertical-align: top;"> <!-- 图片顶部对齐 -->
+                        <img src="files/ConeSpeech_teaser.png" class="thumbnail" style="vertical-align: top;"> <!-- 设置图片的垂直对齐为顶部 -->
+                    </td>
+                    <td class="paperintro">
+                        <p class="paperintro">
+                            <span class="bigtitle" style="vertical-align: top;">ConeSpeech</span> <!-- 确保标题与图片顶部对齐 -->
+                            <br><br><br>
+                            <span class="papertitle">
+                                ConeSpeech: Exploring Directional Speech Interaction for Multi-Person Remote Communication in Virtual Reality 
+                                <br>
+                                <span class="mention"><img src="files/award.png" style="width: 20px; height: 20px;"> Best Paper Nominee Award</span> 
+                            <br><br>
+                            <span class="authorlist"> 
+                                <span class="authorlist"> Yukang Yan, Haohua Liu, Yingtian Shi, Jingying Wang, Ruici Guo, <span class="authorme">Zisu Li</span>, Xuhai Xu, Chun Yu, Yuntao Wang and Yuanchun Shi</span>
+                            <br><br>
+                            <span class="black" style="display: inline-block; vertical-align: middle;">IEEE Transactions on Visualization and Computer Graphics, 2023</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10049667?casa_token=3SH-f28c2k4AAAAA:Nj88S5RAe_W7oo0H3POfUEXsM3wcQXgWrX6vB9nyF9b2bkzCz6X8pqbtDmvhuHVZbEB7C91DGxCrhw" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[ACM]</a>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10049667?casa_token=3SH-f28c2k4AAAAA:Nj88S5RAe_W7oo0H3POfUEXsM3wcQXgWrX6vB9nyF9b2bkzCz6X8pqbtDmvhuHVZbEB7C91DGxCrhw" target="_blank" class="resource" style="display: inline-block; vertical-align: middle;">[Video]</a>
+                            </p>
+                        <br>
+                    </td>
+                </tr>
+            </tbody>
+
+
+
+          
+            
+        </table>
+               
 
 			<br>
 			<br>
